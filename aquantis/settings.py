@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import cloudinary_storage
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-75o9-6huu$l92y_ehkz1r0hu!kf99k-p&i3&_&2$2hox65q)wd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["www.aquantisship.com"]
+ALLOWED_HOSTS = ['www.aquantisship.com']
 
 
 # Application definition
@@ -41,6 +43,8 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'django.contrib.sitemaps',
+    "cloudinary",
+    "cloudinary_storage",
 ]
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
@@ -135,3 +139,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / "media"
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME' : 'dgb5ya7at',
+    'API_KEY'     : '219947941327375',
+    'API_SECRET' : 'rAXJe80svT2p9ImeaxkXiRFq5X4',
+}
+
+DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
