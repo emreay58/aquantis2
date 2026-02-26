@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'django.contrib.sitemaps',
-    'django.contrib.staticfiles',
     'cloudinary_storage',
     'cloudinary',
 ]
@@ -147,4 +146,3 @@ CLOUDINARY_STORAGE = {
 
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
 
-DISABLE_COLLECTSTATIC=1
