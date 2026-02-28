@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'cloudinary_storage',
     'cloudinary',
+    'media',
 ]
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
@@ -137,6 +138,9 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+MEDIA_URL = '/media/'
+
+DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
 
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'dgb5ya7at',
@@ -144,5 +148,5 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': 'rAXJe80svT2p9ImeaxkXiRFq5X4'
 }
 
-DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
+
 
