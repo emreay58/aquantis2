@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-75o9-6huu$l92y_ehkz1r0hu!kf99k-p&i3&_&2$2hox65q)wd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.aquantisship.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -137,12 +137,21 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
+MEDIA_URL = '/media/'
+
+STORAGES = {
+    "default": {
+        "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+    },
+}
 
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'dgb5ya7at',
-    'API_KEY': '219947941327375',
-    'API_SECRET': 'rAXJe80svT2p9ImeaxkXiRFq5X4'
+    'API_KEY': '752447581456456',
+    'API_SECRET': 'ownwrawR2hYm2msZmNo0OJNqJZE'
 }
 
 
