@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'cloudinary_storage',
     'cloudinary',
-    'media',
 ]
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
