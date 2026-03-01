@@ -5,7 +5,7 @@ class ServiceModel(models.Model):
     title = models.CharField(max_length=50, verbose_name='Hizmet Adı')
     description = models.TextField(verbose_name='Hizmet Açıklaması')
     description_big = RichTextField(verbose_name="Geniş Açıklama ve Yazı")
-    image = models.ImageField(verbose_name='Hizmete Özgü Bir Resim Koy')
+    image = models.ImageField(upload_to='services/', verbose_name='Hizmete Özgü Bir Resim Koy')
     slug= models.SlugField()
     is_active =models.BooleanField(verbose_name='Hizmet Aktif Mi')
 
@@ -19,7 +19,7 @@ class Carousel(models.Model):
     caption1 = models.CharField(max_length=100, verbose_name='Altyazı1')
     caption2 = models.CharField(max_length=200, verbose_name='Altyazı2')
     link = models.CharField(max_length=100)
-    image = models.ImageField(help_text="Ölçü: 1920x570")
+    image = models.ImageField(upload_to='image/', help_text="Ölçü: 1920x570")
     is_active = models.BooleanField(default=True, verbose_name='Aktif mi?')
 
     def __str__(self):
