@@ -1,26 +1,67 @@
    {% load static %}
-   <!-- Carousel Start -->
+      <!-- Carousel Start -->
     <div class="container-fluid p-0 pb-5">
         <div class="owl-carousel header-carousel position-relative mb-5">
-           {% for carousel in carousel|slice:":10"  %}
-            <div {% if forloop.first %} class="owl-carousel-item position-relative active" 
-            {% else %} class="owl-carousel-item position-relative"{% endif %}
-            > 
-                <img class="img-fluid" src="{{carousel.image.url}}" alt="">
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="{% static 'img/transit-agency.jpeg' %}" alt="">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-10 col-lg-8">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">{{carousel.caption1}}</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">{{carousel.caption1}}</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">{{carousel.caption2}}</p>
-                                <a href="{% url "services" %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Transit Agency</h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">TRANSIT <span class="text-primary">AGENCY</span></h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">The Çanakkale and Istanbul Straits are among the world’s most critical and congested waterways.</p>
+                                <a href="{% url "transit" %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            {% endfor %}
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="{% static 'img/port-agency-1.jpg' %}" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Port Agency</h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">PORT <span class="text-primary">AGENCY</span></h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Türkiye plays a vital role in global trade, with its ports serving as key gateways for international maritime traffic.</p>
+                                <a href="{% url "port" %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="{% static "img/shipyard-agency-1.jpeg" %}" alt="shipyard-agency">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Shipyard Agency</h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">SHIPYARD<span class="text-primary">AGENCY</span></h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">As Aquantis Ship Agency, we serve as a trusted partner for shipyard agency services throughout Türkiye.</p>
+                                <a href="{% url "shipyard" %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="{% static "img/husbandry-agency-2.jpeg" %}" alt="husbandry-agency">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">HUSBANDRY AGENCY</h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">HUSBANDRY<span class="text-primary">AGENCY</span></h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">At Aquantis Ship Agency, we recognize the critical importance of husbandry services in ensuring the safe, efficient, and uninterrupted operation of vessels.</p>
+                                <a href="{% url "husbandry" %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Carousel End -->

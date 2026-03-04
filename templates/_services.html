@@ -1,5 +1,5 @@
-
-    <!-- Service Start -->
+{% load static %}
+  <!-- Service Start -->
     <div class="container-xxl py-5">
         <div class="container py-5">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -7,18 +7,46 @@
                 <h1 class="mb-5">Explore Our Services</h1>
             </div>
             <div class="row g-4">
-                {% for service in service %}
+                <div class="col-md-6 col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="{% static 'img/transit-agency1.jpeg' %}" alt="">
+                        </div>
+                        <h4 class="mb-3">TRANSIT AGENCY</h4>
+                        <p>The Çanakkale and Istanbul Straits are among the world’s most critical and congested waterways. Our company provides professional ship agency services that ensure safe, efficient, and seamless transits through both straits. Through close coordination, timely communication, and strong local expertise, we manage every stage of the passage with precision.</p>
+                        <a class="btn-slide mt-2" href="{% url "transit" %}"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="{% static 'img/port-agency-2.jpeg' %}" alt="">
+                        </div>
+                        <h4 class="mb-3">PORT AGENCY</h4>
+                        <p>Türkiye plays a vital role in global trade, with its ports serving as key gateways for international maritime traffic. In this context, professional ship agency services are essential to ensure the efficient handling of vessels and cargoes at Turkish ports. Our company provides comprehensive ship agency services nationwide, including vessel handling, documentation support, customs clearance, and cargo operations.</p>
+                        <a class="btn-slide mt-2" href="{% url "port" %}"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
+                    </div>
+                </div>
                 <div class="col-md-6 col-lg-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="service-item p-4">
                         <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="{{service.image.url}}" alt="">
+                            <img class="img-fluid" src="{% static "img/shipyard-agency-2.jpeg" %}" alt="">
                         </div>
-                        <h4 class="mb-3">{{service.title}}</h4>
-                        <p>{{service.description}}</p>
-                        <a class="btn-slide mt-2" href="{% url "service_detail" service.slug %}"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
+                        <h4 class="mb-3">SHIPYARD AGENCY</h4>
+                        <p>As Aquantis Ship Agency, we serve as a trusted partner for shipyard agency services throughout Türkiye. Committed to operational excellence, we ensure effective coordination and seamless communication between shipowners, shipyards, and all relevant stakeholders, supporting the successful execution of maritime projects.</p>
+                        <a class="btn-slide mt-2" href="{% url "shipyard" %}"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
                     </div>
                 </div>
-                {% endfor %}
+                <div class="col-md-6 col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="{% static "img/husbandry-agency.jpeg" %}" alt="">
+                        </div>
+                        <h4 class="mb-3">HUSBANDRY AGENCY</h4>
+                        <p>At Aquantis Ship Agency, we recognize the critical importance of husbandry services in ensuring the safe, efficient, and uninterrupted operation of vessels. Aquantis serves as a comprehensive hub capable of meeting nearly all operational requirements of calling vessels.</p>
+                        <a class="btn-slide mt-2" href="{% url "husbandry" %}"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

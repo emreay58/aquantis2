@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Husbandry Agency İstanbul Türkiye{% endblock title %}
+{% block descripcions %}At Aquantis Ship Agency, we recognize the critical importance of husbandry services in ensuring the safe{% endblock descripcions %}
+{% block content %}
+<div class="container-fluid page-header py-5" style="margin-bottom: 6rem;">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">HUSBANDRY AGENCY</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="{% url "index" %}">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="{% url "services" %}">Services</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">HUSBANDRY AGENCY</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+<!-- About Start -->
+    <div class="container-fluid overflow-hidden py-5 px-lg-0">
+        <div class="container about py-5 px-lg-0">
+            <div class="row g-5 mx-lg-0">
+                <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="{% static "img/husbandry-agency.jpeg" %}" style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 about-text wow fadeInUp" data-wow-delay="0.3s">
+                    <h1 class="mb-2">HUSBANDRY AGENCY</h1>
+                    <p class="mb-2">At Aquantis Ship Agency, we recognize the critical importance of husbandry services in ensuring the safe, efficient, and uninterrupted operation of vessels. Aquantis serves as a comprehensive hub capable of meeting nearly all operational requirements of calling vessels.</p>
+                    <p class="mb-2">Our unwavering commitment to safety, timely transits, and efficient port operations is reflected in the delivery of a full spectrum of husbandry services, meticulously tailored to the specific needs of our principals.</p>
+                    <p class="mb-1">Aquantis Ship Agency distinguishes itself through the provision of an extensive range of husbandry services, designed to support the diverse and dynamic demands of vessel operations within the Turkish Straits.</p>
+                    <h5 class="mb-1">Our services include:</h5>
+                    <ul>
+                        <li>Delivery of cash to the Master</li>
+                        <li>Customs clearance and delivery of transit spare parts, crew mail, and courier consignments</li>
+                        <li>Coordination of stores and supply deliveries</li>
+                        <li>Coordination of bunker and lubricating oil supply</li>
+                        <li>Fresh water supply</li>
+                        <li>Underwater inspections at anchorage</li>
+                        <li>Coordination of survey requirements</li>
+                        <li>Coordination of repairs and technical services</li>
+                        <li>Garbage disposal</li>
+                        <li>De-slopping</li>
+                        <li>Passenger/Supply boat services</li>
+                        <li>Towage services</li>
+                        <li>Crew change formalities in all Turkish ports and straits.</li>
+                        <li>Crew medical assistance</li>
+                        <li>Transportation services</li>
+                        <li>Hotel accommodation</li>
+                        <li>Verbal declaration(Customs formalities for repairing the ship's spares)</li>
+                    </ul>
+                    <a href="{% url "services" %}" class="btn btn-primary py-3 px-5">Explore More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+{% endblock content %}

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Shipyard Agency İstanbul Türkiye{% endblock title %}
+{% block descripcions %}As Aquantis Ship Agency, we serve as a trusted partner for shipyard agency services throughout Turkey.{% endblock descripcions %}
+{% block content %}
+<div class="container-fluid page-header py-5" style="margin-bottom: 6rem;">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">{{service.title|upper}}</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="{% url "index" %}">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="{% url "services" %}">Services</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">{{service.title}}</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+<!-- About Start -->
+    <div class="container-fluid overflow-hidden py-5 px-lg-0">
+        <div class="container about py-5 px-lg-0">
+            <div class="row g-5 mx-lg-0">
+                <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="{% static "img/shipyard-agency-2.jpeg" %}" style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 about-text wow fadeInUp" data-wow-delay="0.3s">
+                    <h1 class="mb-5">SHIPYARD AGENCY</h1>
+                    <p class="mb-5">As Aquantis Ship Agency, we serve as a trusted partner for shipyard agency services throughout Turkey. Committed to operational excellence, we ensure effective coordination and seamless communication between shipowners, shipyards, and all relevant stakeholders, supporting the successful execution of maritime projects.</p>
+                    <h3>Our shipyard agency services include: </h3>
+                    <ul>
+                        <li>Dry-docking and repair supervision</li>
+                        <li>Repair and dry-docking coordination services</li>
+                        <li>Hull cleaning, deck and engine survey support</li>
+                        <li>Annual calibration and testing services</li>
+                        <li>Ship recycling coordination services</li>
+                        <li>Repair, conversion, overhaul, and maintenance support</li>
+                        <li>Tank cleaning services</li>
+                        <li>Gas-free certification</li>
+                        <li>Verbal declaration(Customs formalities for repairing the ship's spares)</li>
+                    </ul>
+                    <a href="{% url "services" %}" class="btn btn-primary py-3 px-5">Explore More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+{% endblock content %}

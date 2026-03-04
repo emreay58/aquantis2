@@ -53,3 +53,40 @@ def Service_Detail(request, slug):
 
 def error_404_view(request, exception):
     return render(request, 'pages/404.html')
+
+
+def Transit_Agency(request):
+    service = ServiceModel.objects.all()
+
+    context = {
+        'service' : service
+    }
+
+    return render(request, "services/transit-agency.html",context)
+
+def Port_Agency(request):
+    service = ServiceModel.objects.all()
+
+    context = {
+        'service' : service
+    }
+
+    return render(request, "services/port-agency.html",context)
+
+def Shipyard_Agency(request):
+    service = ServiceModel.objects.all()
+
+    context = {
+        'service' : service
+    }
+
+    return render(request, "services/shipyard-agency.html",context)
+
+def Husbandry_Agency(request):
+    service = ServiceModel.objects.all()
+
+    context = {
+        'service' : service
+    }
+
+    return render(request, "services/husbandry-agency.html",context)
